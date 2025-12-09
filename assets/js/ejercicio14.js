@@ -2,24 +2,22 @@
  * Nivel de riesgo
  */
 
-let nivel = parseInt(prompt("Ingrese un nivel (1-5):"));
+function ej14(){
+  let nivel = nivel14.value;
 
-switch (nivel) {
-  case 1:
-    console.log("Riesgo biológico");
-    break;
-  case 2:
-    console.log("Riesgo químico");
-    break;
-  case 3:
-    console.log("Riesgo físico");
-    break;
-  case 4:
-    console.log("Riesgo ergonómico");
-    break;
-  case 5:
-    console.log("Riesgo psicosocial");
-    break;
-  default:
-    console.log("Nivel de riesgo no válido.");
+  if(nivel==="" || nivel < 1 || nivel > 5){
+    document.getElementById("out14").innerHTML = "❌ Nivel inválido";
+    return;
+  }
+
+  let msg = {
+    1: "Riesgo biológico",
+    2: "Riesgo químico",
+    3: "Riesgo físico",
+    4: "Riesgo ergonómico",
+    5: "Riesgo psicosocial"
+  }[nivel];
+
+  document.getElementById("out14").innerHTML = ` ${msg}`;
 }
+

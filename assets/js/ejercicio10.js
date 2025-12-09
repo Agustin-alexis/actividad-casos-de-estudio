@@ -2,15 +2,16 @@
  * Par o impar
  */
 
-let num = prompt("Ingrese un numero:");
+function ej10(){
+  let num = num10.value;
 
-if (!isNaN(num) && num.trim() !== "") {
-  num = Number(num);
-  if (num % 2 === 0) {
-    console.log(num + " es un numero par");
-  } else {
-    console.log(num + " es un numero impar");
+  if(num === ""){
+    document.getElementById("out10").innerHTML = "❌ Número inválido";
+    return;
   }
-} else {
-  console.log("¡Ingrese un numero valido!");
+
+  num = Number(num);
+
+  document.getElementById("out10").innerHTML = num % 2 === 0 ? ` ${num} es par` : ` ${num} es impar`;
 }
+

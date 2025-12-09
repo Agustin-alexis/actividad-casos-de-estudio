@@ -2,26 +2,29 @@
  * IMC y diagnostico
  */
 
-let peso = parseFloat(prompt("Peso:"));
-let altura = parseFloat(prompt("Estatura:"));
+function ej11(){
+  let peso = peso11.value;
+  let altura = altura11.value;
 
-let imc = peso / (altura * altura);
-console.log("IMC:", imc);
+  if(peso==="" || altura==="" || peso<=0 || altura<=0){
+    document.getElementById("out11").innerHTML = "❌ Datos inválidos";
+    return;
+  }
 
-if (imc < 16) {
-  console.log("Criterio de ingreso en hospital");
-} else if (imc < 17) {
-  console.log("Infrapeso");
-} else if (imc < 18) {
-  console.log("Bajo peso");
-} else if (imc < 25) {
-  console.log("Peso normal");
-} else if (imc < 30) {
-  console.log("Sobrepeso (Obesidad de grado I)");
-} else if (imc < 35) {
-  console.log("Sobrepeso crónico (Obesidad de grado II)");
-} else if (imc < 40) {
-  console.log("Sobrepeso crónico (Obesidad de grado III)");
-} else {
-  console.log("Obesidad mórbida (Obesidad de grado IV)");
+  peso = Number(peso);
+  altura = Number(altura);
+
+  let imc = peso / (altura * altura);
+  let d = "";
+
+  if(imc < 16) d = "Criterio de ingreso en hospital";
+  else if(imc < 17) d = "Infrapeso";
+  else if(imc < 18) d = "Bajo peso";
+  else if(imc < 25) d = "Peso normal";
+  else if(imc < 30) d = "Sobrepeso (Grado I)";
+  else if(imc < 35) d = "Sobrepeso crónico (Grado II)";
+  else if(imc < 40) d = "Sobrepeso crónico (Grado III)";
+  else d = "Obesidad mórbida";
+
+  document.getElementById("out11").innerHTML = `IMC: ${imc.toFixed(2)} — ${d}`;
 }

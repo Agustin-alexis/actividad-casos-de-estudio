@@ -2,16 +2,22 @@
  * Salario con horas extra
  */
 
-let horas = parseInt(prompt("Horas laboradas:"));
-let tarifa = parseFloat(prompt("Tarifa por hora:"));
+function ej7(){
+  let horas = document.getElementById("horas7").value;
+  let tarifa = document.getElementById("tarifa7").value;
 
-let salario;
+  if(horas === "" || tarifa === "" || horas < 0 || tarifa < 0){
+    document.getElementById("out7").innerHTML = "❌ Datos inválidos";
+    return;
+  }
 
-if (horas <= 40) {
-  salario = horas * tarifa;
-} else {
-  let extras = horas - 40;
-  salario = (40 * tarifa) + (extras * tarifa * 1.5);
+  horas = Number(horas);
+  tarifa = Number(tarifa);
+
+  let salario = horas <= 40 
+    ? horas * tarifa 
+    : (40 * tarifa) + ((horas - 40) * tarifa * 1.5);
+
+  document.getElementById("out7").innerHTML = ` Salario: $${salario}`;
 }
 
-console.log("Salario del trabajador es: $" + salario);

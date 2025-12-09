@@ -2,13 +2,16 @@
  * Mayor de tres numeros
  */
 
-let a = parseInt(prompt("numero1:"));
-let b = parseInt(prompt("numero2:"));
-let c = parseInt(prompt("numero3:"));
+function ej8(){
+  let a = n1_8.value;
+  let b = n2_8.value;
+  let c = n3_8.value;
 
-let mayor = a;
+  if(a==="" || b==="" || c===""){
+    document.getElementById("out8").innerHTML = "❌ Números inválidos";
+    return;
+  }
 
-if (b > mayor) mayor = b;
-if (c > mayor) mayor = c;
+  document.getElementById("out8").innerHTML = ` El mayor es: ${Math.max(a,b,c)}`;
+}
 
-console.log("El numero " + mayor + " es el mayor");

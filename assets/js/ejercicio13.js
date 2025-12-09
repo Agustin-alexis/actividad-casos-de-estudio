@@ -2,18 +2,25 @@
  * Tipo de triangulo
  */
 
-let lado1 = parseFloat(prompt("lado1:"));
-let lado2 = parseFloat(prompt("lado2:"));
-let lado3 = parseFloat(prompt("lado3:"));
+function ej13(){
+  let a = a13.value;
+  let b = b13.value;
+  let c = c13.value;
 
-if (lado1 <= 0 || lado2 <= 0 || lado3 <= 0) {
-  console.log("¡Valor no valido!");
-} else {
-  if (lado1 === lado2 && lado2 === lado3) {
-    console.log("Es un triangulo equilátero");
-  } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
-    console.log("Es un triángulo isósceles");
-  } else {
-    console.log("Es un triángulo escaleno");
+  if(a==="" || b==="" || c==="" || a<=0 || b<=0 || c<=0){
+    document.getElementById("out13").innerHTML = "❌ Valores inválidos";
+    return;
   }
+
+  a = Number(a);
+  b = Number(b);
+  c = Number(c);
+
+  let tipo =
+    a === b && b === c ? "Equilátero" :
+    (a === b || a === c || b === c) ? "Isósceles" :
+    "Escaleno";
+
+  document.getElementById("out13").innerHTML = `✔ ${tipo}`;
 }
+
