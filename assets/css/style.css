@@ -1,0 +1,27 @@
+a{
+    background-color:mediumslateblue;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+}
+
+section{
+    background-color: rgb(0, 121, 250);
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+h4{
+    background-color: wheat;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+p{
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}

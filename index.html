@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estructuras de Control Selectivas</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -20,6 +21,25 @@
     <main class="container">
 
         <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#a1">
+                        Datos Personales
+                    </button>
+                </h2>
+
+                <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                        <section>
+                            <h4>Nombre completo: <p>Agustín Alexis Luligo Chicue</p></h4>
+                            <h4>Ficha: <p>3176243</p></h4>
+                            <h4>Programa: <p>Análisis y Desarrollo de Software</p></h4>
+                        </section>
+                    </div>
+                </div>
+            </div>
 
             <!-- ACTIVIDAD 1 -->
             <div class="accordion-item">
